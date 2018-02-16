@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 // 作用	   ：把類變成web的控制器
 // 返回	   ：返回值如果是"字串"就會返回"字串"，如果是"Map"或是"實體對象"就會返回"json"
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1")
 public class HelloRestController {
 
 	// 請求映射

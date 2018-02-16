@@ -1,12 +1,16 @@
 package com.ctbc.web;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 // 使用規則：在類上面添加
@@ -35,15 +39,36 @@ public class HelloController {
 	// 如果返回 Object 但沒有加 @ResponseBody 的話，會丟出500
 	@GetMapping("/books/object")
 	@ResponseBody
-	public Object getAllReturnObject() {
-		Map<String, Object> map = new HashMap<>();
-		map.put("name", "hello");
-		map.put("age", 18);
-		return map;
+	public Object getAllReturnObject(@RequestParam int page,
+			@RequestParam(value = "size", defaultValue = "5") int size) {
+
+		Map<String, Object> book = new HashMap<>();
+		book.put("name", "從零開始");
+		book.put("isbn", "987654321");
+		book.put("author", "我不知道作者是誰");
+		Map<String, Object> book2 = new HashMap<>();
+		book2.put("name", "從零開始2");
+		book2.put("isbn", "9999999999");
+		book2.put("author", "我不知道作者是誰2");
+
+		List<Map<String, Object>> contents = new ArrayList<>();
+		contents.add(book);
+		contents.add(book2);
+
+		Map<String, Object> pagemap = new HashMap<>();
+		pagemap.put("page", page);
+		pagemap.put("size", size);
+		pagemap.put("content", contents);
+
+		return pagemap;
 	}
 	// ==================================================================================================================
 	// ==================================================================================================================
 
+	// ******************************************************************************************************************
+	// ************************** @PathVariable => 獲取一些服務器的資源，刪除或修改 *************************************
+	// ************************** @RequestParam => 提交表單、過濾資源				*************************************
+	// ******************************************************************************************************************
 	// ==================================================================================================================
 	// ==================================================================================================================
 	// 正則表達式: {參數名:正則表達式}
@@ -70,6 +95,21 @@ public class HelloController {
 		book.put("isbn", "987654321");
 		book.put("author", "我不知道作者是誰");
 		book.put("username", username);
+		return book;
+	}
+	// ==================================================================================================================
+	// ==================================================================================================================
+
+	// ==================================================================================================================
+	// ==================================================================================================================
+	@PostMapping("/books")
+	@ResponseBody
+	public Object insertBook(@RequestParam("name") String bookName, @RequestParam String author,
+			@RequestParam String isbn) {
+		Map<String, Object> book = new HashMap<>();
+		book.put("name", bookName);
+		book.put("author", author);
+		book.put("isbn", isbn);
 		return book;
 	}
 	// ==================================================================================================================
