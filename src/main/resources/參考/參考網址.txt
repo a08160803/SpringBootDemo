@@ -1,3 +1,6 @@
 Restful介紹
 http://www.ruanyifeng.com/blog/2014/05/restful_api.html
 http://www.ruanyifeng.com/blog/2011/09/restful.html
+
+JPA
+https://docs.spring.io/spring-data/jpa/docs/2.0.3.RELEASE/reference/html/#jpa.query-methods

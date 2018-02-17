@@ -14,4 +14,11 @@ public interface BookService {
 
 	public void deleteOne(Long id);
 
+	public List<Book> findBooksByAuthor(String author);
+
+	public List<Book> findByAuthorAndStatus(String author, Integer status);
+
+	public List<Book> findByDescriptionEndsWith(String description);
+
+	public List<Book> findByDescriptionContains(String description);
 }

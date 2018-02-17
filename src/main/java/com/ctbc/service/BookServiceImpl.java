@@ -46,4 +46,36 @@ public class BookServiceImpl implements BookService {
 		bookRepository.delete(id);
 	}
 
+	/*
+	 * 根據author查詢書單列表
+	 */
+	@Override
+	public List<Book> findBooksByAuthor(String author) {
+		return bookRepository.findByAuthor(author);
+	}
+
+	/*
+	 * 根據author and status查詢書單列表
+	 */
+	@Override
+	public List<Book> findByAuthorAndStatus(String author, Integer status) {
+		return bookRepository.findByAuthorAndStatus(author, status);
+	}
+
+	/*
+	 * 根據description查詢書單結尾列表 ('%xxx')
+	 * */
+	@Override
+	public List<Book> findByDescriptionEndsWith(String description) {
+		return bookRepository.findByDescriptionEndsWith(description);
+	}
+
+	/*
+	 * 根據description查詢書單包含列表 ('%xxx%')
+	 * */
+	@Override
+	public List<Book> findByDescriptionContains(String description) {
+		return bookRepository.findByDescriptionContains(description);
+	}
+
 }

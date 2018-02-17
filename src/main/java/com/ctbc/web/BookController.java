@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ctbc.domain.Book;
@@ -58,5 +59,30 @@ public class BookController {
 	public void deleteOneBook(@PathVariable Long id) {
 		bookService.deleteOne(id);
 	}
+
+	// ================================================================================================
+	// @PostMapping("/books/by")
+	// public List<Book> getBooksByAuthor(@RequestParam String author) {
+	// return bookService.findBooksByAuthor(author);
+	// }
+
+	// @PostMapping("/books/by")
+	// public List<Book> getBooksByAuthorAndStatus(@RequestParam String author,
+	// @RequestParam
+	// Integer status) {
+	// return bookService.findByAuthorAndStatus(author, status);
+	// }
+
+	// @PostMapping("/books/by")
+	// public List<Book> getBooksByDescriptionEndsWith(@RequestParam String
+	// description) {
+	// return bookService.findByDescriptionEndsWith(description);
+	// }
+	
+	@PostMapping("/books/by")
+	public List<Book> getBooksByDescriptionContains(@RequestParam String description) {
+		return bookService.findByDescriptionContains(description);
+	}
+	// ================================================================================================
 
 }
