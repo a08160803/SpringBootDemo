@@ -7,3 +7,9 @@ logging:
     root: warn
     com.ctbc: debug
   file: logs/yml.log
+  
+book:
+  name: 從零開始
+  author: 我不知道作者是誰
+  isbn: ${random.uuid}
+  description: ${book.name}，這本書不錯
