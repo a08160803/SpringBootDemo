@@ -1,0 +1,33 @@
+2018-02-17 08:59:55.627  INFO 6776 --- [main] com.ctbc.SpringBootDemoApplication       : Starting SpringBootDemoApplication on DESKTOP-FOP662H with PID 6776 (F:\Workspace\JavaWorkspace\01_SpringBootWorkspace\SpringBootDemo\target\classes started by Asus in F:\Workspace\JavaWorkspace\01_SpringBootWorkspace\SpringBootDemo)
+2018-02-17 08:59:55.628 DEBUG 6776 --- [main] com.ctbc.SpringBootDemoApplication       : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-17 08:59:55.629  INFO 6776 --- [main] com.ctbc.SpringBootDemoApplication       : No active profile set, falling back to default profiles: default
+2018-02-17 08:59:55.725  INFO 6776 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4386f16: startup date [Sat Feb 17 08:59:55 CST 2018]; root of context hierarchy
+2018-02-17 08:59:56.191  INFO 6776 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8082 (http)
+2018-02-17 08:59:56.196  INFO 6776 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-17 08:59:56.197  INFO 6776 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-02-17 08:59:56.237  INFO 6776 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/fuck]   : Initializing Spring embedded WebApplicationContext
+2018-02-17 08:59:56.237  INFO 6776 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 514 ms
+2018-02-17 08:59:56.297  INFO 6776 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-17 08:59:56.299  INFO 6776 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-17 08:59:56.300  INFO 6776 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-17 08:59:56.300  INFO 6776 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-17 08:59:56.300  INFO 6776 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-17 08:59:56.434  INFO 6776 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4386f16: startup date [Sat Feb 17 08:59:55 CST 2018]; root of context hierarchy
+2018-02-17 08:59:56.461  INFO 6776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[GET]}" onto public java.lang.String com.ctbc.web.HelloController.getAllBookPage()
+2018-02-17 08:59:56.462  INFO 6776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/string],methods=[GET]}" onto public java.lang.String com.ctbc.web.HelloController.getAllReturnString()
+2018-02-17 08:59:56.463  INFO 6776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/object],methods=[GET]}" onto public java.lang.Object com.ctbc.web.HelloController.getAllReturnObject(int,int)
+2018-02-17 08:59:56.463  INFO 6776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/{id}/{username:[a-z_]+}],methods=[GET]}" onto public java.lang.Object com.ctbc.web.HelloController.getOne(long,java.lang.String)
+2018-02-17 08:59:56.469  INFO 6776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books],methods=[POST]}" onto public java.lang.Object com.ctbc.web.HelloController.insertBook(java.lang.String,java.lang.String,java.lang.String)
+2018-02-17 08:59:56.470  INFO 6776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/books/different/{id}/{username:[a-z_]+}],methods=[GET]}" onto public java.lang.Object com.ctbc.web.HelloController.getOneDifferent(long,java.lang.String)
+2018-02-17 08:59:56.470  INFO 6776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/v1/say],methods=[POST]}" onto public java.lang.String com.ctbc.web.HelloRestController.hello()
+2018-02-17 08:59:56.471  INFO 6776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-17 08:59:56.472  INFO 6776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-17 08:59:56.484  INFO 6776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-17 08:59:56.484  INFO 6776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-17 08:59:56.498  INFO 6776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-17 08:59:56.668  INFO 6776 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-17 08:59:56.691  INFO 6776 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8082 (http)
+2018-02-17 08:59:56.693  INFO 6776 --- [main] com.ctbc.SpringBootDemoApplication       : Started SpringBootDemoApplication in 1.205 seconds (JVM running for 1.506)
+2018-02-17 09:00:18.866  INFO 6776 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-02-17 09:00:18.867  INFO 6776 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4386f16: startup date [Sat Feb 17 08:59:55 CST 2018]; root of context hierarchy
+2018-02-17 09:00:18.867  INFO 6776 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown

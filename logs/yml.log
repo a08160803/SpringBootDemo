@@ -1,0 +1,4 @@
+2018-02-17 09:00:31.507  INFO 5072 --- [main] com.ctbc.SpringBootDemoApplication       : Starting SpringBootDemoApplication on DESKTOP-FOP662H with PID 5072 (F:\Workspace\JavaWorkspace\01_SpringBootWorkspace\SpringBootDemo\target\classes started by Asus in F:\Workspace\JavaWorkspace\01_SpringBootWorkspace\SpringBootDemo)
+2018-02-17 09:00:31.508 DEBUG 5072 --- [main] com.ctbc.SpringBootDemoApplication       : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-17 09:00:31.508  INFO 5072 --- [main] com.ctbc.SpringBootDemoApplication       : No active profile set, falling back to default profiles: default
+2018-02-17 09:00:32.556  INFO 5072 --- [main] com.ctbc.SpringBootDemoApplication       : Started SpringBootDemoApplication in 1.189 seconds (JVM running for 1.483)
