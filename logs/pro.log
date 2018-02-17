@@ -1,0 +1,6 @@
+2018-02-17 10:43:58.113  INFO 10288 --- [main] com.ctbc.SpringBootDemoApplication       : Starting SpringBootDemoApplication on DESKTOP-FOP662H with PID 10288 (F:\Workspace\JavaWorkspace\01_SpringBootWorkspace\SpringBootDemo\target\classes started by Asus in F:\Workspace\JavaWorkspace\01_SpringBootWorkspace\SpringBootDemo)
+2018-02-17 10:43:58.115  INFO 10288 --- [main] com.ctbc.SpringBootDemoApplication       : The following profiles are active: pro
+2018-02-17 10:43:59.280  INFO 10288 --- [main] com.ctbc.SpringBootDemoApplication       : Started SpringBootDemoApplication in 1.326 seconds (JVM running for 1.63)
+2018-02-17 11:18:49.656  INFO 10832 --- [main] com.ctbc.SpringBootDemoApplicationTests  : Starting SpringBootDemoApplicationTests on DESKTOP-FOP662H with PID 10832 (started by Asus in F:\Workspace\JavaWorkspace\01_SpringBootWorkspace\SpringBootDemo)
+2018-02-17 11:18:49.657  INFO 10832 --- [main] com.ctbc.SpringBootDemoApplicationTests  : The following profiles are active: pro
+2018-02-17 11:18:50.944  INFO 10832 --- [main] com.ctbc.SpringBootDemoApplicationTests  : Started SpringBootDemoApplicationTests in 1.512 seconds (JVM running for 2.342)

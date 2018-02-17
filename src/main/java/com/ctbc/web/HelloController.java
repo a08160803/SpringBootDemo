@@ -21,7 +21,7 @@ import com.ctbc.domain.Book;
 // 作用	   ：把類變成web的控制器
 // 返回	   ：返回值如果是"字串"就會映射到"模板"
 @Controller
-@RequestMapping("/v1")
+@RequestMapping("/api/v1")
 public class HelloController {
 	
 	@Autowired

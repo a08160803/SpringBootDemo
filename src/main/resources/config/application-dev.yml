@@ -1,0 +1,9 @@
+server:
+  port: 8080 # 修改port
+#  context-path: /api # 給根路徑(預設為"/")
+ 
+logging:
+  level:
+    root: debug
+    com.ctbc: debug
+  file: logs/dev.log

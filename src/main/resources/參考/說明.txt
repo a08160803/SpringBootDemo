@@ -1,4 +1,12 @@
 ========================================================================================
+啟動
+一、在IDE中啟動
+二、java -jar SpringBootDemo-1.0.jar --spring.profiles.active=dev
+三、mvn spring-boot:run
+========================================================================================
+
+
+========================================================================================
 如果有兩個properties
 一、 resources/application.properties
 二、 resources/config/application.properties
