@@ -24,9 +24,6 @@ import com.ctbc.domain.Book;
 @RequestMapping("/api/v1")
 public class HelloController {
 	
-	@Autowired
-	private Book book;
-
 	// *************************************************************************************
 	// ************************************** @Value ***************************************
 	// *************************************************************************************
@@ -100,7 +97,7 @@ public class HelloController {
 	@GetMapping("/books/{id}")
 	@ResponseBody
 	public Object getOne(@PathVariable /* 獲取路徑上的參數，會將字串型別自動轉換 */ long id) {
-		return book;
+		return null;
 	}
 
 	// 正則表達式: {參數名:正則表達式}

@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: pro # 激活哪些，用逗號隔開
+    active: dev # 激活哪些，用逗號隔開
     
 book:
   name: 從零開始

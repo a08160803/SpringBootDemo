@@ -1,18 +1,30 @@
 package com.ctbc.domain;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-@Component
-@ConfigurationProperties(prefix = "book") // 群體塞值進去的概念，參數給前綴，要使用時使用 @Autowired 注入
+@Entity
 public class Book {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 	private String name;
 	private String author;
-	private String isbn;
+	private Integer status;
 	private String description;
 
 	public Book() {
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -31,12 +43,12 @@ public class Book {
 		this.author = author;
 	}
 
-	public String getIsbn() {
-		return isbn;
+	public Integer getStatus() {
+		return status;
 	}
 
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 
 	public String getDescription() {
@@ -49,7 +61,8 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [name=" + name + ", author=" + author + ", isbn=" + isbn + ", description=" + description + "]";
+		return "Book [id=" + id + ", name=" + name + ", author=" + author + ", status=" + status + ", description="
+				+ description + "]";
 	}
 
 }
