@@ -78,15 +78,27 @@ public class BookController {
 	// description) {
 	// return bookService.findByDescriptionEndsWith(description);
 	// }
-	
-//	@PostMapping("/books/by")
-//	public List<Book> getBooksByDescriptionContains(@RequestParam String description) {
-//		return bookService.findByDescriptionContains(description);
-//	}
-	
+
+	// @PostMapping("/books/by")
+	// public List<Book> getBooksByDescriptionContains(@RequestParam String
+	// description) {
+	// return bookService.findByDescriptionContains(description);
+	// }
+
+	// @PostMapping("/books/by")
+	// public List<Book> findByJPQL(@RequestParam int len) {
+	// return bookService.findByJPQL(len);
+	// }
+
+	// @PostMapping("/books/by")
+	// public int updateByJPQL(@RequestParam Integer status, @RequestParam Long id)
+	// {
+	// return bookService.updateByJPQL(status, id);
+	// }
+
 	@PostMapping("/books/by")
-	public List<Book> findByJPQL(@RequestParam int len) {
-		return bookService.findByJPQL(len);
+	public int deleteByJPQL(@RequestParam Long id) {
+		return bookService.deleteByJPQL(id);
 	}
 	// ================================================================================================
 

@@ -23,4 +23,8 @@ public interface BookService {
 	public List<Book> findByDescriptionContains(String description);
 
 	public List<Book> findByJPQL(int len);
+	
+	public int updateByJPQL(Integer status, Long id);
+	
+	public int deleteByJPQL(Long id);
 }

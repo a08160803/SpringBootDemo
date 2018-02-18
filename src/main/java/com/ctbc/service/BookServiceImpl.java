@@ -2,6 +2,8 @@ package com.ctbc.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -80,10 +82,28 @@ public class BookServiceImpl implements BookService {
 
 	/*
 	 * 自定義查詢(JPQL)
-	 * */
+	 */
 	@Override
 	public List<Book> findByJPQL(int len) {
 		return bookRepository.findByJPQL(len);
+	}
+
+	/*
+	 * 自定義更新(JPQL)
+	 */
+	@Transactional
+	@Override
+	public int updateByJPQL(Integer status, Long id) {
+		return bookRepository.updateByJPQL(status, id);
+	}
+
+	/*
+	 * 自定義刪除(JPQL)
+	 */
+	@Transactional
+	@Override
+	public int deleteByJPQL(Long id) {
+		return bookRepository.deleteByJPQL(id);
 	}
 
 }
