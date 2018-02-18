@@ -21,4 +21,6 @@ public interface BookService {
 	public List<Book> findByDescriptionEndsWith(String description);
 
 	public List<Book> findByDescriptionContains(String description);
+
+	public List<Book> findByJPQL(int len);
 }

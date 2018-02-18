@@ -79,9 +79,14 @@ public class BookController {
 	// return bookService.findByDescriptionEndsWith(description);
 	// }
 	
+//	@PostMapping("/books/by")
+//	public List<Book> getBooksByDescriptionContains(@RequestParam String description) {
+//		return bookService.findByDescriptionContains(description);
+//	}
+	
 	@PostMapping("/books/by")
-	public List<Book> getBooksByDescriptionContains(@RequestParam String description) {
-		return bookService.findByDescriptionContains(description);
+	public List<Book> findByJPQL(@RequestParam int len) {
+		return bookService.findByJPQL(len);
 	}
 	// ================================================================================================
 

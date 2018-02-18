@@ -64,7 +64,7 @@ public class BookServiceImpl implements BookService {
 
 	/*
 	 * 根據description查詢書單結尾列表 ('%xxx')
-	 * */
+	 */
 	@Override
 	public List<Book> findByDescriptionEndsWith(String description) {
 		return bookRepository.findByDescriptionEndsWith(description);
@@ -72,10 +72,18 @@ public class BookServiceImpl implements BookService {
 
 	/*
 	 * 根據description查詢書單包含列表 ('%xxx%')
-	 * */
+	 */
 	@Override
 	public List<Book> findByDescriptionContains(String description) {
 		return bookRepository.findByDescriptionContains(description);
+	}
+
+	/*
+	 * 自定義查詢(JPQL)
+	 * */
+	@Override
+	public List<Book> findByJPQL(int len) {
+		return bookRepository.findByJPQL(len);
 	}
 
 }
